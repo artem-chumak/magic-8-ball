@@ -9,6 +9,7 @@
 The project without JS. Only HTML and CSS are used. Random selection is implemented through CSS animation.
 
 ### Improvements (to do)
+0. Фавиконка (?)
 1. Код
 2. Добавить себе на сайт
 3. Оформить OG
