@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<title>Magic 🎱 ball</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css" />
+	<link rel="stylesheet" href="style.css" />
+</head>
+<!--
+	TODO:
+1. Разобраться в коде.
+2. Разобраться как работает рандом
+3. Стилизация - цвета - шрифты - формы
+4. Использовать переменные
+5. Использовать медия для мобилы
+6. Сделать редми
+7. Опубликовать
+8. Добавить себе на сайт
+9. Оформить OG
+10. Сделать посты про этот проект
+
+-->
+
+<body>
+	<form>
+		<!-- answers -->
+		<input type="radio" name="answer" id="Yes" value="Yes" /><span>Yes</span>
+		<input type="radio" name="answer" id="it seems to work" value=" it seems to work" /><span>It<br/>seems<br />to
+			work</span>
+		<input type="radio" name="answer" id="Not this time" value="Not this time" /><span>Not this<br />time</span>
+		<input type="radio" name="answer" id="Sure thing!" value="Sure thing!" /><span>Sure<br/>thing!</span>
+		<input type="radio" name="answer" id="No" value="No" /><span>No</span>
+		<input type="radio" name="answer" id="Have to wait" value="Have to wait" /><span>Have<br />to wait</span>
+		<input type="radio" name="answer" id="Most likely" value="Most likely" /><span>Most<br />likely</span>
+		<input type="radio" name="answer" id="Bad idea" value="Bad idea" /><span>Bad<br />idea</span>
+		<input type="radio" name="answer" id="Definitely" value="Definitely" /><span>Definitely</span>
+		<input type="radio" name="answer" id="Check and act" value="Check and act" /><span>Check<br />and act</span>
+		<input type="radio" name="answer" id="Shake again" value="Shake again" /><span>Shake <br />
+			again
+		</span>
+		<input type="radio" name="answer" id="Risky" value="Risky" /><span>Risky</span>
+		<input type="radio" name="answer" id="Change the question" value="Change the question" /><span>Change<br />the
+			question</span>
+		<input type="radio" name="answer" id="Act" value="Act" /><span>Act</span>
+		<input type="radio" name="answer" id="It's not easy" value="It's not easy" /><span>It's not<br />
+			easy</span>
+		<!-- THE BALL -->
+		<div class="eight__backdrop"></div>
+		<div class="eight">
+			<!-- Front -->
+			<div class="eight__fascia">
+				<!-- drow 8 -->
+				<div class="eight__number">8</div>
+			</div>
+			<!-- Back -->
+			<div class="eight__fascia">
+				<!-- Answer window -->
+				<div class="eight__window"></div>
+			</div>
+			<!-- Answers table -->
+			<ul>
+				<li>
+					<label for="Yes"></label>
+				</li>
+				<li>
+					<label for="it seems to work"></label>
+				</li>
+				<li>
+					<label for="Not this time"></label>
+				</li>
+				<li>
+					<label for="Sure thing!"></label>
+				</li>
+				<li>
+					<label for="No"></label>
+				</li>
+				<li>
+					<label for="Have to wait"></label>
+				</li>
+				<li>
+					<label for="Most likely"></label>
+				</li>
+				<li>
+					<label for="Bad idea"></label>
+				</li>
+				<li>
+					<label for="Definitely"></label>
+				</li>
+				<li>
+					<label for="Check and act"></label>
+				</li>
+				<li>
+					<label for="Shake again"></label>
+				</li>
+				<li>
+					<label for="Risky"></label>
+				</li>
+				<li>
+					<label for="Change the question"></label>
+				</li>
+				<li>
+					<label for="Act"></label>
+				</li>
+				<li>
+					<label for="It's not easy"></label>
+				</li>
+			</ul>
+		</div>
+		<!-- reset button -->
+		<input type="reset" />
+	</form>
+</body>
+
+</html>
