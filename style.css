@@ -1,5 +1,5 @@
 :root {
-  --background-color: linear-gradient(180deg, #D3CCE3 0%, #E9E4F0 100%);
+  --background-color: linear-gradient(180deg, #d3cce3 0%, #e9e4f0 100%);
   --min-height: calc(var(--ball-size) + 200px);
   --font-size: 16px;
 
@@ -9,15 +9,24 @@
 
   --eight-border-height: 10px;
   --eight-window-border: var(--eight-border-height) double #555;
-  --eight-window-shadow: rgb(213, 213, 213) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.9) -3px -3px 6px 1px inset;
-  --eight-number-background: #F1F2F2;
+  --eight-window-shadow: rgb(213, 213, 213) 3px 3px 6px 0px inset,
+    rgba(255, 255, 255, 0.9) -3px -3px 6px 1px inset;
+  --eight-number-background: #f1f2f2;
   --eight-number-size: calc(var(--ball-size) * 0.4);
   --eight-number-color: #222;
-  --eight-number-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2), -2px -1px 4px rgba(255, 255, 255, 0.1);
+  --eight-number-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2),
+    -2px -1px 4px rgba(255, 255, 255, 0.1);
 
-  --answer-text-color: #F1F2F2;
+  --answer-text-color: #f1f2f2;
   --answer-text-shadow: 1px 1px 0 #bfbfbf;
   --answer-background-color: #00f;
+}
+
+@media screen and (max-width: 440px) {
+  :root {
+    --ball-size: calc(100vw - 40px);
+    --min-height: calc(var(--ball-size) + 100px);
+  }
 }
 
 * {
@@ -36,6 +45,7 @@ body {
   height: 100vh;
   min-height: var(--min-height);
   background: var(--background-color);
+  overflow: hidden;
 }
 
 form {
