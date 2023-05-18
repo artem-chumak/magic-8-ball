@@ -11,8 +11,7 @@ The project without JS. Only HTML and CSS are used. Random selection is implemen
 ### Improvements (to do)
 1. Код
 2. Добавить себе на сайт
-3. Оформить OG
-4. Сделать посты про этот проект
+3. Сделать посты про этот проект
 
 ### References
 https://thecode.media/magic-8-ball/
