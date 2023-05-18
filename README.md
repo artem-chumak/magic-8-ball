@@ -9,12 +9,10 @@
 The project without JS. Only HTML and CSS are used. Random selection is implemented through CSS animation.
 
 ### Improvements (to do)
-0. Фавиконка (?)
 1. Код
 2. Добавить себе на сайт
 3. Оформить OG
 4. Сделать посты про этот проект
-5. Добавить свои контакты в проект
 
 ### References
 https://thecode.media/magic-8-ball/

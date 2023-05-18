@@ -48,6 +48,27 @@ body {
   overflow: hidden;
 }
 
+.creds {
+  position: absolute;
+  top: 26px;
+}
+
+.p-page {
+  position: absolute;
+  bottom: 26px;
+}
+
+a {
+  color: #0351c1;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s ease-in;
+}
+
+a:hover {
+  border-bottom: 2px solid #0351c1;
+}
+
 form {
   border-radius: 100%;
   cursor: pointer;
