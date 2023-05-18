@@ -2,6 +2,7 @@
   --background-color: linear-gradient(180deg, #d3cce3 0%, #e9e4f0 100%);
   --min-height: calc(var(--ball-size) + 200px);
   --font-size: 16px;
+  --links-color: #0351c1;
 
   --ball-size: 400px;
   --ball-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
@@ -59,14 +60,14 @@ body {
 }
 
 a {
-  color: #0351c1;
+  color: var(--links-color);
   text-decoration: none;
   border-bottom: 2px solid transparent;
   transition: all 0.2s ease-in;
 }
 
 a:hover {
-  border-bottom: 2px solid #0351c1;
+  border-bottom: 2px solid var(--links-color);
 }
 
 form {
