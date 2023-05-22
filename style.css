@@ -113,8 +113,8 @@ label {
 }
 
 ul {
-  -webkit-animation: scale 7s infinite steps(20);
-  animation: scale 7s infinite steps(20);
+  -webkit-animation: scale 4s infinite steps(20);
+  animation: scale 4s infinite steps(20);
   left: 0;
   top: 0;
   width: 100%;
@@ -250,64 +250,6 @@ span:nth-of-type(odd) {
 @keyframes scale {
   to {
     transform: translateY(-100%);
-  }
-}
-
-@-webkit-keyframes floaty {
-  0%,
-  100% {
-    transform: translate(-50%, -50%);
-  }
-  25% {
-    transform: translate(-50%, -50%) translate(-2%, 2%) rotate(2deg);
-  }
-  50% {
-    transform: translate(-50%, -50%) translate(2%, -2%) rotate(-2deg);
-  }
-  75% {
-    transform: translate(-50%, -50%) translate(1%, 1%) rotate(1deg);
-  }
-}
-
-@keyframes floaty {
-  0%,
-  100% {
-    transform: translate(-50%, -50%);
-  }
-  25% {
-    transform: translate(-50%, -50%) translate(-2%, 2%) rotate(2deg);
-  }
-  50% {
-    transform: translate(-50%, -50%) translate(2%, -2%) rotate(-2deg);
-  }
-  75% {
-    transform: translate(-50%, -50%) translate(1%, 1%) rotate(1deg);
-  }
-}
-
-@-webkit-keyframes shake {
-  0%,
-  100% {
-    transform: translate(0, 0);
-  }
-  50% {
-    transform: translate(10px, 5px);
-  }
-  75% {
-    transform: translate(-10px, -5px);
-  }
-}
-
-@keyframes shake {
-  0%,
-  100% {
-    transform: translate(0, 0);
-  }
-  50% {
-    transform: translate(10px, 5px);
-  }
-  75% {
-    transform: translate(-10px, -5px);
   }
 }
 
