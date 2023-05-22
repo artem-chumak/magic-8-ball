@@ -12,8 +12,7 @@
 - Design.
 
 ### Improvements (to do)
-1. Добавить себе на сайт
-2. Сделать посты про этот проект
+Post in my SM nets
 
 ### References
 https://thecode.media/magic-8-ball/
