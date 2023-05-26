@@ -12,7 +12,7 @@
 - Design.
 
 ### Improvements (to do)
-Post in my SM nets
+Do posts
 
 ### References
 https://thecode.media/magic-8-ball/
