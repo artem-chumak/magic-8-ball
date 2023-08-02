@@ -98,6 +98,7 @@ form * {
   opacity: 0;
   z-index: 6;
   position: absolute;
+  -webkit-tap-highlight-color: transparent;
 }
 
 li {
@@ -123,6 +124,7 @@ ul {
   padding: 0;
   position: absolute;
   z-index: 5;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .eight {
@@ -132,7 +134,7 @@ ul {
   overflow: hidden;
   position: relative;
   z-index: 4;
-  
+  -webkit-tap-highlight-color: transparent;
 }
 
 .eight__backdrop {
