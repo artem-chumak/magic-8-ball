@@ -13,6 +13,7 @@
 
 ### Improvements (to do)
 Do posts
+turn into PWA (?)
 
 ### References
 https://thecode.media/magic-8-ball/
