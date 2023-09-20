@@ -1,6 +1,7 @@
 {
 	"name": "Magic 8 ball",
 	"short_name": "M-8-B",
+	"start_url": "/",
 	"icons": [
 		{
 			"src": "/images/android-chrome-192x192.png",
