@@ -1,7 +1,7 @@
 {
 	"name": "Magic 8 ball",
 	"short_name": "M-8-B",
-	"start_url": "/",
+	"start_url": ".",
 	"homepage_url": "https://artem-chumak.github.io/magic-8-ball/",
   "providedBy": {
     "name": "Artem Chumak",
