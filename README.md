@@ -10,6 +10,7 @@
 - Random selection is implemented through CSS animation.
 - CSS variables.
 - Design.
+- PWA
 
 ### Improvements (to do)
 Do posts
