@@ -13,7 +13,7 @@
     "url": "https://artchumak.ru/"
   },
 	"orientation": "portrait",
-	"iconPath": "/magic-8-ball/images/android-chrome-256x256.png",
+	"iconPath": "/magic-8-ball/images/pwa-icon.png",
 	"icons": [
 		{
 			"src": "/magic-8-ball/images/android-chrome-512x512.png",
