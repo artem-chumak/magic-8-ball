@@ -14,7 +14,8 @@
 
 ### Improvements (to do)
 Do posts
-PWA icon issue, fix
+PWA icon issue, fix (android, mob)
+Add button to install pwa
 
 ### References
 https://thecode.media/magic-8-ball/
