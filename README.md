@@ -14,7 +14,7 @@
 
 ### Improvements (to do)
 Do posts
-turn into PWA (?)
+PWA icon issue, fix
 
 ### References
 https://thecode.media/magic-8-ball/
