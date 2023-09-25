@@ -68,6 +68,9 @@
         >Github</a
       >
     </div>
+    <div class="pwa-button">
+      Set as <button type="button" id="pwa-button">PWA</button> on your device
+    </div>
     <form>
       <!-- answers -->
       <input type="radio" name="answer" id="Yes" value="Yes" />
@@ -196,6 +199,7 @@
       <input type="reset" />
     </form>
     <script>
+      // PWA SW logic
       if ("serviceWorker" in navigator) {
         navigator.serviceWorker
           .register("./sw.js")
@@ -209,6 +213,26 @@
             console.error("Service Worker registration failed:", error);
           });
       }
+      // Set PWA button logit
+      window.addEventListener("beforeinstallprompt", (event) => {
+        event.preventDefault();
+        document.querySelector("pwa-button").style.display = "block";
+        deferredPrompt = event;
+      });
+
+      document.querySelector("#pwa-button").addEventListener("click", () => {
+        if (deferredPrompt) {
+          deferredPrompt.prompt();
+          deferredPrompt.userChoice.then((choiceResult) => {
+            if (choiceResult.outcome === "accepted") {
+              console.log("Accepted PWA Installation");
+            } else {
+              console.log("Declined PWA Installation");
+            }
+            deferredPrompt = null;
+          });
+        }
+      });
     </script>
   </body>
 </html>
