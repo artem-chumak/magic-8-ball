@@ -215,7 +215,7 @@
       }
       // Set PWA button logit
       window.addEventListener("beforeinstallprompt", (event) => {
-        alert('pwa ready')
+        console.log('Ready to set PWA')
         event.preventDefault();
         document.querySelector(".pwa-button").style.display = "block";
         deferredPrompt = event;
