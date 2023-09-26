@@ -277,6 +277,12 @@
         atLeastOneChecked ? resetMagicBall() : shakeMagicBall();
       }
 
+      if ("ondevicemotion" in window) {
+        alert("working");
+      } else {
+        alert("not working");
+      };
+
       window.addEventListener("devicemotion", function (event) {
         const acceleration = event.acceleration;
         const accelerationIncludingGravity = event.accelerationIncludingGravity;
