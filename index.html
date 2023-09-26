@@ -299,13 +299,13 @@
         console.log(acceleration, accelerationIncludingGravity, rotationRate);
 
         document.querySelector("#a-1").textContent =
-          accelerationIncludingGravity.x;
+        Math.floor(accelerationIncludingGravity.x);
         document.querySelector("#a-2").textContent =
-          accelerationIncludingGravity.y;
+        Math.floor(accelerationIncludingGravity.y);
         document.querySelector("#a-3").textContent =
-          accelerationIncludingGravity.z;
-        document.querySelector("#a-4").textContent = acceleration.x;
-        document.querySelector("#a-5").textContent = "Why";
+        Math.floor(accelerationIncludingGravity.z);
+        document.querySelector("#a-4").textContent = Math.floor(acceleration.x);
+        document.querySelector("#a-5").textContent = Math.floor(rotationRate.x);
 
         // if (isStrongShake(accelerationIncludingGravity)) {
         //   shakeOnDevice();
