@@ -72,11 +72,11 @@
       Set as <button type="button" id="pwa-button">PWA</button> on your device
     </div>
     <div class="shake-box">
-<p id="1">0</p>
-<p id="2">0</p>
-<p id="3">0</p>
-<p id="4">0</p>
-<p id="5">0</p>
+      <p id="1">2</p>
+      <p id="2">2</p>
+      <p id="3">2</p>
+      <p id="4">4</p>
+      <p id="5">5</p>
     </div>
     <form>
       <!-- answers -->
@@ -283,13 +283,14 @@
         const rotationRate = event.rotationRate;
         // alert('A-a-a-a-a-a-a-a!')
 
-        document.querySelector('#1').textContent = accelerationIncludingGravity.x || 1;
-        document.querySelector('#2').textContent = accelerationIncludingGravity.y || 1;
-        document.querySelector('#3').textContent = accelerationIncludingGravity.z || 1;
-        document.querySelector('#4').textContent = acceleration.x || 1;
-        document.querySelector('#5').textContent = rotationRate.x || 1;
-
-
+        document.querySelector("#1").textContent =
+          accelerationIncludingGravity.x || 1;
+        document.querySelector("#2").textContent =
+          accelerationIncludingGravity.y || 1;
+        document.querySelector("#3").textContent =
+          accelerationIncludingGravity.z || 1;
+        document.querySelector("#4").textContent = acceleration.x || 1;
+        document.querySelector("#5").textContent = rotationRate.x || 1;
 
         // if (isStrongShake(accelerationIncludingGravity)) {
         //   shakeOnDevice();
