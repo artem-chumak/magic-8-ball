@@ -67,6 +67,16 @@ body {
   display: none;
 }
 
+.shake-box {
+  position: absolute;
+  bottom: 76px;
+  font-family: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 20px;
+}
+
 button {
   color: var(--links-color);
   text-decoration: none;

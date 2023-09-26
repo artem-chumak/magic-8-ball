@@ -71,6 +71,13 @@
     <div class="pwa-button">
       Set as <button type="button" id="pwa-button">PWA</button> on your device
     </div>
+    <div class="shake-box">
+<p id="1">0</p>
+<p id="2">0</p>
+<p id="3">0</p>
+<p id="4">0</p>
+<p id="5">0</p>
+    </div>
     <form>
       <!-- answers -->
       <input type="radio" name="answer" id="Yes" value="Yes" />
@@ -274,10 +281,17 @@
         const acceleration = event.acceleration;
         const accelerationIncludingGravity = event.accelerationIncludingGravity;
         const rotationRate = event.rotationRate;
-        alert('A-a-a-a-a-a-a-a!')
-        if (isStrongShake(accelerationIncludingGravity)) {
-          shakeOnDevice();
-        }
+        // alert('A-a-a-a-a-a-a-a!')
+
+        document.querySelector('#1').textContent = accelerationIncludingGravity.x;
+        document.querySelector('#2').textContent = accelerationIncludingGravity.y;
+        document.querySelector('#3').textContent = accelerationIncludingGravity.z;
+
+
+
+        // if (isStrongShake(accelerationIncludingGravity)) {
+        //   shakeOnDevice();
+        // }
       });
 
       function isStrongShake(acceleration) {
