@@ -72,11 +72,11 @@
       Set as <button type="button" id="pwa-button">PWA</button> on your device
     </div>
     <div class="shake-box">
-      <p id="1">2</p>
-      <p id="2">2</p>
-      <p id="3">2</p>
-      <p id="4">4</p>
-      <p id="5">88</p>
+      <p id="a-1">2</p>
+      <p id="a-2">2</p>
+      <p id="a-3">2</p>
+      <p id="a-4">4</p>
+      <p id="a-5">88</p>
     </div>
     <form>
       <!-- answers -->
@@ -287,6 +287,9 @@
         console.log(`${event.acceleration.x} m/s2`);
       });
 
+      document.querySelector("#a-1").textContent = 57;
+
+
       window.addEventListener("devicemotion", (event) => {
         const acceleration = event.acceleration;
         const accelerationIncludingGravity = event.accelerationIncludingGravity;
@@ -295,28 +298,28 @@
 
         console.log(acceleration, accelerationIncludingGravity, rotationRate);
 
-        document.querySelector("#1").textContent =
-          accelerationIncludingGravity.x || 1;
-        document.querySelector("#2").textContent =
-          accelerationIncludingGravity.y || 1;
-        document.querySelector("#3").textContent =
-          accelerationIncludingGravity.z || 1;
-        document.querySelector("#4").textContent = acceleration.x || 1;
-        document.querySelector("#5").textContent = "Why";
+        document.querySelector("#a-1").textContent =
+          accelerationIncludingGravity.x;
+        document.querySelector("#a-2").textContent =
+          accelerationIncludingGravity.y;
+        document.querySelector("#a-3").textContent =
+          accelerationIncludingGravity.z;
+        document.querySelector("#a-4").textContent = acceleration.x;
+        document.querySelector("#a-5").textContent = "Why";
 
         // if (isStrongShake(accelerationIncludingGravity)) {
         //   shakeOnDevice();
         // }
       });
 
-      function isStrongShake(acceleration) {
-        const threshold = 30;
-        return (
-          Math.abs(acceleration.x) > threshold ||
-          Math.abs(acceleration.y) > threshold ||
-          Math.abs(acceleration.z) > threshold
-        );
-      }
+      // function isStrongShake(acceleration) {
+      //   const threshold = 30;
+      //   return (
+      //     Math.abs(acceleration.x) > threshold ||
+      //     Math.abs(acceleration.y) > threshold ||
+      //     Math.abs(acceleration.z) > threshold
+      //   );
+      // }
     </script>
   </body>
 </html>
