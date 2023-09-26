@@ -283,9 +283,11 @@
         const rotationRate = event.rotationRate;
         // alert('A-a-a-a-a-a-a-a!')
 
-        document.querySelector('#1').textContent = accelerationIncludingGravity.x;
-        document.querySelector('#2').textContent = accelerationIncludingGravity.y;
-        document.querySelector('#3').textContent = accelerationIncludingGravity.z;
+        document.querySelector('#1').textContent = accelerationIncludingGravity.x || 1;
+        document.querySelector('#2').textContent = accelerationIncludingGravity.y || 1;
+        document.querySelector('#3').textContent = accelerationIncludingGravity.z || 1;
+        document.querySelector('#4').textContent = acceleration.x || 1;
+        document.querySelector('#5').textContent = rotationRate.x || 1;
 
 
 
