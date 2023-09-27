@@ -279,7 +279,7 @@
         const variantsCount = variants.length;
         const randomVariant = Math.floor(Math.random() * (variantsCount + 1));
         const element = variants[randomVariant];
-        if (!setBallState) {
+        if (!ballState) {
           alert(ballState)
           element.click();
           setBallState();
