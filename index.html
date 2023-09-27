@@ -312,15 +312,15 @@
         maxRotateY = 0,
         maxRotateZ = 0;
 
-        // document.querySelector("#b-1").textContent = 0;
-        // document.querySelector("#b-2").textContent = 0;
-        // document.querySelector("#b-3").textContent = 0;
-        // document.querySelector("#b-4").textContent = 0;
-        // document.querySelector("#b-5").textContent = 0;
-        // document.querySelector("#b-6").textContent = 0;
-        // document.querySelector("#b-7").textContent = 0;
-        // document.querySelector("#b-8").textContent = 0;
-        // document.querySelector("#b-9").textContent = 0;
+      // document.querySelector("#b-1").textContent = 0;
+      // document.querySelector("#b-2").textContent = 0;
+      // document.querySelector("#b-3").textContent = 0;
+      // document.querySelector("#b-4").textContent = 0;
+      // document.querySelector("#b-5").textContent = 0;
+      // document.querySelector("#b-6").textContent = 0;
+      // document.querySelector("#b-7").textContent = 0;
+      // document.querySelector("#b-8").textContent = 0;
+      // document.querySelector("#b-9").textContent = 0;
 
       window.addEventListener("devicemotion", (event) => {
         document.querySelector(".shake-box").style.display = "flex";
@@ -342,59 +342,97 @@
         document.querySelector("#a-4").textContent = Math.floor(acceleration.x);
         document.querySelector("#a-5").textContent = Math.floor(acceleration.y);
         document.querySelector("#a-6").textContent = Math.floor(acceleration.z);
-        document.querySelector("#a-8").textContent = Math.floor(rotationRate.alpha);
-        document.querySelector("#a-7").textContent = Math.floor(rotationRate.beta);
-        document.querySelector("#a-9").textContent = Math.floor(rotationRate.gamma);
+        // document.querySelector("#a-8").textContent = Math.floor(
+        //   rotationRate.alpha
+        // );
+        // document.querySelector("#a-7").textContent = Math.floor(
+        //   rotationRate.beta
+        // );
+        // document.querySelector("#a-9").textContent = Math.floor(
+        //   rotationRate.gamma
+        // );
 
-        if(accelerationIncludingGravity.x >= maxAccelerationIncX) {
+        if (accelerationIncludingGravity.x >= maxAccelerationIncX) {
           maxAccelerationIncX = accelerationIncludingGravity.x;
         }
 
-        if(accelerationIncludingGravity.y >= maxAccelerationIncY) {
+        if (accelerationIncludingGravity.y >= maxAccelerationIncY) {
           maxAccelerationIncY = accelerationIncludingGravity.y;
         }
 
-        if(accelerationIncludingGravity.z >= maxAccelerationIncZ) {
+        if (accelerationIncludingGravity.z >= maxAccelerationIncZ) {
           maxAccelerationIncZ = accelerationIncludingGravity.z;
         }
 
-        if(acceleration.x >= maxAccelerationX) {
+        if (acceleration.x >= maxAccelerationX) {
           maxAccelerationX = acceleration.x;
         }
 
-        if(acceleration.y >= maxAccelerationY) {
+        if (acceleration.y >= maxAccelerationY) {
           maxAccelerationY = acceleration.y;
         }
 
-        if(acceleration.z >= maxAccelerationZ) {
+        if (acceleration.z >= maxAccelerationZ) {
           maxAccelerationZ = acceleration.z;
         }
 
-        if(rotationRate.alpha >= maxRotateX) {
+        if (rotationRate.alpha >= maxRotateX) {
           maxRotateX = rotationRate.alpha;
         }
 
-        if(rotationRate.beta >= maxRotateY) {
+        if (rotationRate.beta >= maxRotateY) {
           maxRotateY = rotationRate.beta;
         }
 
-        if(rotationRate.gamma >= maxRotateZ) {
+        if (rotationRate.gamma >= maxRotateZ) {
           maxRotateZ = rotationRate.gamma;
         }
 
-        document.querySelector("#b-1").textContent = Math.floor(maxAccelerationIncX);
-        document.querySelector("#b-2").textContent = Math.floor(maxAccelerationIncY);
-        document.querySelector("#b-3").textContent = Math.floor(maxAccelerationIncZ);
-        document.querySelector("#b-4").textContent = Math.floor(maxAccelerationX);
-        document.querySelector("#b-5").textContent = Math.floor(maxAccelerationY);
-        document.querySelector("#b-6").textContent = Math.floor(maxAccelerationZ);
-        document.querySelector("#b-7").textContent = Math.floor(maxRotateX);
-        document.querySelector("#b-8").textContent = Math.floor(maxRotateY);
-        document.querySelector("#b-9").textContent = Math.floor(maxRotateZ);
+        document.querySelector("#b-1").textContent =
+          Math.floor(maxAccelerationIncX);
+        document.querySelector("#b-2").textContent =
+          Math.floor(maxAccelerationIncY);
+        document.querySelector("#b-3").textContent =
+          Math.floor(maxAccelerationIncZ);
+        document.querySelector("#b-4").textContent =
+          Math.floor(maxAccelerationX);
+        document.querySelector("#b-5").textContent =
+          Math.floor(maxAccelerationY);
+        document.querySelector("#b-6").textContent =
+          Math.floor(maxAccelerationZ);
+        // document.querySelector("#b-7").textContent = Math.floor(maxRotateX);
+        // document.querySelector("#b-8").textContent = Math.floor(maxRotateY);
+        // document.querySelector("#b-9").textContent = Math.floor(maxRotateZ);
 
         // if (isStrongShake(accelerationIncludingGravity)) {
         //   shakeOnDevice();
         // }
+      });
+
+      window.addEventListener("deviceorientation", (event) => {
+        const alpha = event.alpha; // угол вокруг оси Z (азимут)
+        const beta = event.beta; // угол вокруг оси X (наклон вперед/назад)
+        const gamma = event.gamma; // угол вокруг оси Y (наклон влево/вправо)
+
+        document.querySelector("#a-8").textContent = Math.floor(alpha);
+        document.querySelector("#a-7").textContent = Math.floor(beta);
+        document.querySelector("#a-9").textContent = Math.floor(gamma);
+
+        if (alpha >= maxRotateX) {
+          maxRotateX = alpha;
+        }
+
+        if (beta >= maxRotateY) {
+          maxRotateY = beta;
+        }
+
+        if (gamma >= maxRotateZ) {
+          maxRotateZ = gamma;
+        }
+
+        document.querySelector("#b-7").textContent = Math.floor(maxRotateX);
+        document.querySelector("#b-8").textContent = Math.floor(maxRotateY);
+        document.querySelector("#b-9").textContent = Math.floor(maxRotateZ);
       });
 
       // function isStrongShake(acceleration) {
