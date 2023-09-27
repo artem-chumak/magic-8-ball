@@ -422,7 +422,7 @@
         // document.querySelector("#b-8").textContent = Math.floor(maxRotateY);
         // document.querySelector("#b-9").textContent = Math.floor(maxRotateZ);
 
-        if (isStrongShake(accelerationIncludingGravity)) {
+        if (isStrongShake(accelerationIncludingGravity) && !ballState) {
           shakeOnDevice();
         }
       });
@@ -438,11 +438,12 @@
         const beta = event.beta; // угол вокруг оси X (наклон вперед/назад)
         const gamma = event.gamma; // угол вокруг оси Y (наклон влево/вправо)
 
-        document.querySelector("#a-8").textContent = Math.floor(alpha);
-        document.querySelector("#a-7").textContent = Math.floor(beta);
-        document.querySelector("#a-9").textContent = Math.floor(gamma);
-
-        flipOverDevice(gamma);
+        // document.querySelector("#a-8").textContent = Math.floor(alpha);
+        // document.querySelector("#a-7").textContent = Math.floor(beta);
+        // document.querySelector("#a-9").textContent = Math.floor(gamma);
+        if (!ballState) {
+          flipOverDevice(gamma);
+        }
         // if (alpha >= maxRotateX) {
         //   maxRotateX = alpha;
         // }
