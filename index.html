@@ -265,12 +265,26 @@
       //     view: window,
       //   });
 
+      let ballState = false;
+
+      function setBallState() {
+        if (ballState) {
+          return;
+        } else {
+          setBallState = true;
+          setTimeout(() => {
+            setBallState = false;
+          }, 2000);
+        }
+      }
+
       function shakeMagicBall() {
         const variants = document.querySelectorAll("label");
         const variantsCount = variants.length;
         const randomVariant = Math.floor(Math.random() * (variantsCount + 1));
         const element = variants[randomVariant];
         element.click();
+        setBallState();
         // element.dispatchEvent(clickEvent);
       }
 
@@ -285,7 +299,7 @@
         const variants = document.querySelectorAll('input[type="radio"]');
         let atLeastOneChecked = false;
         variants.forEach((item) => {
-          if (item.checked) {
+          if (item.checked && !ballState) {
             atLeastOneChecked = true;
           }
         });
@@ -440,7 +454,6 @@
         // document.querySelector("#b-8").textContent = Math.floor(maxRotateY);
         // document.querySelector("#b-9").textContent = Math.floor(maxRotateZ);
       });
-
     </script>
   </body>
 </html>
