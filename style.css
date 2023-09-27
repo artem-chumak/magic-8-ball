@@ -74,7 +74,19 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  column-gap: 20px;
+  column-gap: 16px;
+  display: none;
+}
+
+.shake-box-max {
+  position: absolute;
+  bottom: 92px;
+  font-family: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 16px;
+  display: none;
 }
 
 button {

@@ -72,11 +72,26 @@
       Set as <button type="button" id="pwa-button">PWA</button> on your device
     </div>
     <div class="shake-box">
-      <p id="a-1">2</p>
-      <p id="a-2">2</p>
-      <p id="a-3">2</p>
-      <p id="a-4">4</p>
-      <p id="a-5">88</p>
+      <p id="a-1"></p>
+      <p id="a-2"></p>
+      <p id="a-3"></p>
+      <p id="a-4"></p>
+      <p id="a-5"></p>
+      <p id="a-6"></p>
+      <p id="a-7"></p>
+      <p id="a-8"></p>
+      <p id="a-9"></p>
+    </div>
+    <div class="shake-box-max">
+      <p id="b-1"></p>
+      <p id="b-2"></p>
+      <p id="b-3"></p>
+      <p id="b-4"></p>
+      <p id="b-5"></p>
+      <p id="b-6"></p>
+      <p id="b-7"></p>
+      <p id="b-8"></p>
+      <p id="b-9"></p>
     </div>
     <form>
       <!-- answers -->
@@ -289,23 +304,85 @@
 
       document.querySelector("#a-1").textContent = 57;
 
+      let maxAccelerationIncX = 0,
+        maxAccelerationIncY = 0,
+        maxAccelerationIncZ = 0,
+        maxAccelerationX = 0,
+        maxAccelerationY = 0,
+        maxAccelerationZ = 0,
+        maxRotateX = 0,
+        maxRotateY = 0,
+        maxRotateZ = 0;
 
       window.addEventListener("devicemotion", (event) => {
-        const acceleration = event.acceleration;
+        document.querySelector(".shake-box").style.display = "block";
+        document.querySelector(".shake-box-max").style.display = "block";
+
         const accelerationIncludingGravity = event.accelerationIncludingGravity;
+        const acceleration = event.acceleration;
         const rotationRate = event.rotationRate;
-        // alert('A-a-a-a-a-a-a-a!')
 
-        console.log(acceleration, accelerationIncludingGravity, rotationRate);
-
-        document.querySelector("#a-1").textContent =
-        Math.floor(accelerationIncludingGravity.x);
-        document.querySelector("#a-2").textContent =
-        Math.floor(accelerationIncludingGravity.y);
-        document.querySelector("#a-3").textContent =
-        Math.floor(accelerationIncludingGravity.z);
+        document.querySelector("#a-1").textContent = Math.floor(
+          accelerationIncludingGravity.x
+        );
+        document.querySelector("#a-2").textContent = Math.floor(
+          accelerationIncludingGravity.y
+        );
+        document.querySelector("#a-3").textContent = Math.floor(
+          accelerationIncludingGravity.z
+        );
         document.querySelector("#a-4").textContent = Math.floor(acceleration.x);
-        document.querySelector("#a-5").textContent = Math.floor(rotationRate.x);
+        document.querySelector("#a-5").textContent = Math.floor(acceleration.y);
+        document.querySelector("#a-6").textContent = Math.floor(acceleration.z);
+        document.querySelector("#a-7").textContent = rotationRate.x;
+        document.querySelector("#a-8").textContent = rotationRate.y;
+        document.querySelector("#a-9").textContent = rotationRate.z;
+
+        if(accelerationIncludingGravity.x >= maxAccelerationIncX) {
+          maxAccelerationIncX = accelerationIncludingGravity.x;
+        }
+
+        if(accelerationIncludingGravity.y >= maxAccelerationIncY) {
+          maxAccelerationIncY = accelerationIncludingGravity.y;
+        }
+
+        if(accelerationIncludingGravity.z >= maxAccelerationIncZ) {
+          maxAccelerationIncZ = accelerationIncludingGravity.z;
+        }
+
+        if(acceleration.x >= maxAccelerationX) {
+          maxAccelerationX = acceleration.x;
+        }
+
+        if(acceleration.y >= maxAccelerationY) {
+          maxAccelerationY = acceleration.y;
+        }
+
+        if(acceleration.z >= maxAccelerationZ) {
+          maxAccelerationZ = acceleration.z;
+        }
+
+        if(rotationRate.x >= maxRotateX) {
+          maxRotateX = rotationRate.x;
+        }
+
+        if(rotationRate.y >= maxRotateY) {
+          maxRotateY = rotationRate.y;
+        }
+
+        if(rotationRate.z >= maxRotateZ) {
+          maxRotateZ = rotationRate.z;
+        }
+
+        document.querySelector("#b-1").textContent = maxAccelerationIncX;
+        document.querySelector("#b-2").textContent = maxAccelerationIncY;
+        document.querySelector("#b-3").textContent = maxAccelerationIncZ;
+        document.querySelector("#b-4").textContent = maxAccelerationX;
+        document.querySelector("#b-5").textContent = maxAccelerationY;
+        document.querySelector("#b-6").textContent = maxAccelerationZ;
+        document.querySelector("#b-7").textContent = maxRotateX;
+        document.querySelector("#b-8").textContent = maxRotateY;
+        document.querySelector("#b-9").textContent = maxRotateZ;
 
         // if (isStrongShake(accelerationIncludingGravity)) {
         //   shakeOnDevice();
