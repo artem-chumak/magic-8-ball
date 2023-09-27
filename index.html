@@ -292,7 +292,7 @@
       function resetMagicBall() {
         const reseter = document.querySelector('input[type="reset"]');
         // reseter.dispatchEvent(clickEvent);
-        if (!setBallState) {
+        if (!ballState) {
           reseter.click();
         } else {
           return;
