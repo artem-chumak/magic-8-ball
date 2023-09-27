@@ -291,7 +291,11 @@
       function resetMagicBall() {
         const reseter = document.querySelector('input[type="reset"]');
         // reseter.dispatchEvent(clickEvent);
-        reseter.click();
+        if (!setBallState) {
+          reseter.click();
+        } else {
+          return;
+        }
         // console.log(reseter)
       }
 
@@ -299,7 +303,7 @@
         const variants = document.querySelectorAll('input[type="radio"]');
         let atLeastOneChecked = false;
         variants.forEach((item) => {
-          if (item.checked && !ballState) {
+          if (item.checked) {
             atLeastOneChecked = true;
           }
         });
