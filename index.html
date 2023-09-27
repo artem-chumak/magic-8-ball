@@ -268,14 +268,10 @@
       let ballState = false;
 
       function setBallState() {
-        if (ballState) {
-          return;
-        } else {
-          setBallState = true;
-          setTimeout(() => {
-            setBallState = false;
-          }, 1500);
-        }
+        setBallState = true;
+        setTimeout(() => {
+          setBallState = false;
+        }, 1500);
       }
 
       function shakeMagicBall() {
@@ -283,8 +279,13 @@
         const variantsCount = variants.length;
         const randomVariant = Math.floor(Math.random() * (variantsCount + 1));
         const element = variants[randomVariant];
-        element.click();
-        setBallState();
+        if (!setBallState) {
+          element.click();
+          setBallState();
+        } else {
+          return;
+        }
+
         // element.dispatchEvent(clickEvent);
       }
 
