@@ -304,7 +304,7 @@
         const variants = document.querySelectorAll('input[type="radio"]');
         let atLeastOneChecked = false;
         variants.forEach((item) => {
-          if (item.checked) {
+          if (item.checked && !ballState) {
             atLeastOneChecked = true;
           }
         });
