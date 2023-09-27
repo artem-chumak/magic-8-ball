@@ -74,8 +74,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  column-gap: 16px;
-  display: none;
+  column-gap: 8px;
+  /* display: none; */
 }
 
 .shake-box-max {
@@ -85,8 +85,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  column-gap: 16px;
-  display: none;
+  column-gap: 8px;
+  /* display: none; */
 }
 
 button {

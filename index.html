@@ -72,26 +72,26 @@
       Set as <button type="button" id="pwa-button">PWA</button> on your device
     </div>
     <div class="shake-box">
-      <p id="a-1"></p>
-      <p id="a-2"></p>
-      <p id="a-3"></p>
-      <p id="a-4"></p>
-      <p id="a-5"></p>
-      <p id="a-6"></p>
-      <p id="a-7"></p>
-      <p id="a-8"></p>
-      <p id="a-9"></p>
+      <p id="a-1">88</p>
+      <p id="a-2">88</p>
+      <p id="a-3">88</p>
+      <p id="a-4">88</p>
+      <p id="a-5">88</p>
+      <p id="a-6">88</p>
+      <p id="a-7">88</p>
+      <p id="a-8">88</p>
+      <p id="a-9">88</p>
     </div>
     <div class="shake-box-max">
-      <p id="b-1"></p>
-      <p id="b-2"></p>
-      <p id="b-3"></p>
-      <p id="b-4"></p>
-      <p id="b-5"></p>
-      <p id="b-6"></p>
-      <p id="b-7"></p>
-      <p id="b-8"></p>
-      <p id="b-9"></p>
+      <p id="b-1">88</p>
+      <p id="b-2">88</p>
+      <p id="b-3">88</p>
+      <p id="b-4">88</p>
+      <p id="b-5">88</p>
+      <p id="b-6">88</p>
+      <p id="b-7">88</p>
+      <p id="b-8">88</p>
+      <p id="b-9">88</p>
     </div>
     <form>
       <!-- answers -->
@@ -292,17 +292,15 @@
         atLeastOneChecked ? resetMagicBall() : shakeMagicBall();
       }
 
-      if ("ondevicemotion" in window) {
-        alert("working");
-      } else {
-        alert("not working");
-      }
+      // if ("ondevicemotion" in window) {
+      //   alert("working");
+      // } else {
+      //   alert("not working");
+      // }
 
-      window.addEventListener("devicemotion", (event) => {
-        console.log(`${event.acceleration.x} m/s2`);
-      });
-
-      document.querySelector("#a-1").textContent = 57;
+      // window.addEventListener("devicemotion", (event) => {
+      //   console.log(`${event.acceleration.x} m/s2`);
+      // });
 
       let maxAccelerationIncX = 0,
         maxAccelerationIncY = 0,
@@ -313,6 +311,16 @@
         maxRotateX = 0,
         maxRotateY = 0,
         maxRotateZ = 0;
+
+        // document.querySelector("#b-1").textContent = 0;
+        // document.querySelector("#b-2").textContent = 0;
+        // document.querySelector("#b-3").textContent = 0;
+        // document.querySelector("#b-4").textContent = 0;
+        // document.querySelector("#b-5").textContent = 0;
+        // document.querySelector("#b-6").textContent = 0;
+        // document.querySelector("#b-7").textContent = 0;
+        // document.querySelector("#b-8").textContent = 0;
+        // document.querySelector("#b-9").textContent = 0;
 
       window.addEventListener("devicemotion", (event) => {
         document.querySelector(".shake-box").style.display = "block";
