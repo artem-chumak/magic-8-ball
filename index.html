@@ -404,9 +404,9 @@
         // document.querySelector("#b-8").textContent = Math.floor(maxRotateY);
         // document.querySelector("#b-9").textContent = Math.floor(maxRotateZ);
 
-        // if (isStrongShake(accelerationIncludingGravity)) {
-        //   shakeOnDevice();
-        // }
+        if (isStrongShake(accelerationIncludingGravity)) {
+          shakeOnDevice();
+        }
       });
 
       window.addEventListener("deviceorientation", (event) => {
@@ -435,14 +435,14 @@
         document.querySelector("#b-9").textContent = Math.floor(maxRotateZ);
       });
 
-      // function isStrongShake(acceleration) {
-      //   const threshold = 30;
-      //   return (
-      //     Math.abs(acceleration.x) > threshold ||
-      //     Math.abs(acceleration.y) > threshold ||
-      //     Math.abs(acceleration.z) > threshold
-      //   );
-      // }
+      function isStrongShake(acceleration) {
+        const threshold = 30;
+        return (
+          Math.abs(acceleration.x) > threshold ||
+          Math.abs(acceleration.y) > threshold ||
+          Math.abs(acceleration.z) > threshold
+        );
+      }
     </script>
   </body>
 </html>
