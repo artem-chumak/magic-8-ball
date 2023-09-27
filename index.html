@@ -342,9 +342,9 @@
         document.querySelector("#a-4").textContent = Math.floor(acceleration.x);
         document.querySelector("#a-5").textContent = Math.floor(acceleration.y);
         document.querySelector("#a-6").textContent = Math.floor(acceleration.z);
-        document.querySelector("#a-7").textContent = rotationRate.alpha;
-        document.querySelector("#a-8").textContent = rotationRate.beta;
-        document.querySelector("#a-9").textContent = rotationRate.gamma;
+        document.querySelector("#a-8").textContent = Math.floor(rotationRate.beta);
+        document.querySelector("#a-7").textContent = Math.floor(rotationRate.alpha);
+        document.querySelector("#a-9").textContent = Math.floor(rotationRate.gamma);
 
         if(accelerationIncludingGravity.x >= maxAccelerationIncX) {
           maxAccelerationIncX = accelerationIncludingGravity.x;
