@@ -382,12 +382,12 @@
           maxRotateZ = rotationRate.z;
         }
 
-        document.querySelector("#b-1").textContent = maxAccelerationIncX;
-        document.querySelector("#b-2").textContent = maxAccelerationIncY;
-        document.querySelector("#b-3").textContent = maxAccelerationIncZ;
-        document.querySelector("#b-4").textContent = maxAccelerationX;
-        document.querySelector("#b-5").textContent = maxAccelerationY;
-        document.querySelector("#b-6").textContent = maxAccelerationZ;
+        document.querySelector("#b-1").textContent = Math.floor(maxAccelerationIncX);
+        document.querySelector("#b-2").textContent = Math.floor(maxAccelerationIncY);
+        document.querySelector("#b-3").textContent = Math.floor(maxAccelerationIncZ);
+        document.querySelector("#b-4").textContent = Math.floor(maxAccelerationX);
+        document.querySelector("#b-5").textContent = Math.floor(maxAccelerationY);
+        document.querySelector("#b-6").textContent = Math.floor(maxAccelerationZ);
         // document.querySelector("#b-7").textContent = maxRotateX;
         // document.querySelector("#b-8").textContent = maxRotateY;
         // document.querySelector("#b-9").textContent = maxRotateZ;
