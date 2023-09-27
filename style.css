@@ -71,22 +71,22 @@ body {
   position: absolute;
   bottom: 76px;
   font-family: inherit;
-  display: flex;
+  /* display: flex; */
   align-items: center;
   justify-content: center;
   column-gap: 8px;
-  /* display: none; */
+  display: none;
 }
 
 .shake-box-max {
   position: absolute;
   bottom: 92px;
   font-family: inherit;
-  display: flex;
+  /* display: flex; */
   align-items: center;
   justify-content: center;
   column-gap: 8px;
-  /* display: none; */
+  display: none;
 }
 
 button {
