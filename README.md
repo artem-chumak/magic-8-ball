@@ -18,6 +18,7 @@
 - Add shake feature for mob
 - Rewrite for JS version in new GH repo
 - Add logic to cover device flip over
+- Add logic by space taping
 
 ### References
 https://thecode.media/magic-8-ball/
