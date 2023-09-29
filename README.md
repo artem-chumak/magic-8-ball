@@ -17,6 +17,7 @@
 - PWA icon issue, fix (android, mob)
 - Add shake feature for mob
 - Rewrite for JS version in new GH repo
+- Add logic to cover device flip over
 
 ### References
 https://thecode.media/magic-8-ball/
