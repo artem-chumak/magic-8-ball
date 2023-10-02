@@ -11,6 +11,7 @@
 - CSS variables.
 - Design.
 - PWA
+- Gesture control
 
 ### Improvements (to do)
 - Do posts
