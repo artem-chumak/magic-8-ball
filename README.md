@@ -14,11 +14,11 @@
 - Gesture control
 
 ### Improvements (to do)
-- Do posts
-- PWA icon issue, fix (android, mob)
-- Add shake feature for mob
-- Rewrite for JS version in new GH repo
-- Add logic to cover device flip over
+- Do posts,
+- PWA icon issue, fix (android, mob),
+- Add shake feature for mob,
+- Rewrite for JS version in new GH repo,
+- Add logic to cover device flip over,
 - Add logic by space taping.
 
 ### References
