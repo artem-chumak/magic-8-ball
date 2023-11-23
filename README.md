@@ -6,10 +6,10 @@
 
 ### Features
 
-- The project without JavaScript. Only HTML and CSS are used.
-- Random selection is implemented through CSS animation.
-- CSS variables.
-- Design.
+- The project without JavaScript. Only HTML and CSS are used
+- Random selection is implemented through CSS animation
+- CSS variables
+- Design
 - PWA
 - Gesture control
 
