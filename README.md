@@ -13,7 +13,7 @@
 - PWA,
 - Gesture control.
 
-### Improvements (to do)
+### Improvements (to do):
 - Do posts
 - PWA icon issue, fix (android, mob)
 - Add shake feature for mob
